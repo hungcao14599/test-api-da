@@ -1,0 +1,71 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+###
+
+GET http://localhost:5000/api/auth/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDhhNmYzYjQxMTAzZDFmNzhhOTU0YzgiLCJpYXQiOjE2MTk3MTM0OTF9.JFlIm_UiPOjOpvvgARAloOuJBxgAHRKe8MHVrMgOa68
+
+###
+
+POST http://localhost:5000/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDhhNmYzYjQxMTAzZDFmNzhhOTU0YzgiLCJpYXQiOjE2MTk3MTM0OTF9.JFlIm_UiPOjOpvvgARAloOuJBxgAHRKe8MHVrMgOa68
+
+{
+  "title": "NodeJS",
+  "description": "NodeJS",
+  "url": "nodejs.com",
+  "status": "TO LEARN"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDhhNmYzYjQxMTAzZDFmNzhhOTU0YzgiLCJpYXQiOjE2MTk3MTM0OTF9.JFlIm_UiPOjOpvvgARAloOuJBxgAHRKe8MHVrMgOa68
+
+###
+PUT http://localhost:5000/api/posts/608addee6bafbf2738eda0df
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDhhNmYzYjQxMTAzZDFmNzhhOTU0YzgiLCJpYXQiOjE2MTk3MTQ5ODB9.11CDZQqdpPYbEmgQn2TEndjzUxz0-qdR1eviWHKcdDM
+
+{
+  "title": "Vue",
+  "description": "VUEEEEE",
+  "url": "https://vuejs.org",
+  "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/608addee6bafbf2738eda0df
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDhhNmYzYjQxMTAzZDFmNzhhOTU0YzgiLCJpYXQiOjE2MTk3MTYwNDV9.s4987_ZhhtNbPgYjyYSTeRocwVK4Jy61iMrsQxSiYe8
+
+###
+
+POST http://localhost:5000/api/products/
+Content-Type: application/json
+
+{
+
+    "name": "ACER",
+    "price": "7000",
+    "status": true
+}
