@@ -16,8 +16,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/posts', postRouter);
 app.use('/api/products', productRouter);
 
-const port = 5005;
-
+const port = process.env.PORT || 5004
 app.listen(port, function() {
     console.log('Your app running on port ' + port);
 });
